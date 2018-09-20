@@ -1,0 +1,15 @@
+17-08-2018
+repositiorio para el modulo entorno de desarrollo del IES serpis
+
+Crear usurario y repositorio en github (pendiente de anotar)
+virtualbox (pendiente de anotar)
+
+git:
+Crear usurario y repositorio en github (pendiente de anotar)
+
+
+git clone https://github.com/josealbertopelu/ED.git
+git config --global user.name josealbertopelu
+git config --global user.email 1dam.jcamara@institutosepis.org
+git config --global push.default simple
+
