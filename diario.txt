@@ -13,3 +13,19 @@ git config --global user.name josealbertopelu
 git config --global user.email 1dam.jcamara@institutosepis.org
 git config --global push.default simple
 
+24-09-2018
+
+en maquina virtual con ubuntu 16.04:
+
+sudo apt-add-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt install oracle-java8-installer
+
+Creamos HolaMundo.java, compilamos y ejecutamos. 
+
+Para hacer un commit(agregar al git los nuevos archivos y actualizar los que ya estaban):
+
+git add .
+git status
+git commit -m "(porque hacemos este commit)"
+
