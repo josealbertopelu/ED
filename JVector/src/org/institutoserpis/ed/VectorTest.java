@@ -1,11 +1,10 @@
 
-
-import static org.junit.Assert.assertEquals;
-
-import org.junit.Test;
-
-import JVector.Vector;
 package org.institutoserpis.ed;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
 
 
 
@@ -29,4 +28,12 @@ class VectorTest {
 		assertEquals(-1, Vector.indexOf(v, 22));
 	}
 
+	@Test
+	void min() {
+		assertEquals(12,Vector.min(new int[] {16,12,15,14,17}));
+		assertEquals(12,Vector.min(new int[] {12,16,15,14,17}));
+		assertEquals(12,Vector.min(new int[] {16,15,14,17,12}));
+		assertEquals(2,Vector.min(new int[] {2}));
+		assertEquals(-33,Vector.min(new int[] {16,15,14,17,12,-1,-33}));
+	}
 }

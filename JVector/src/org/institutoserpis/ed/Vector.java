@@ -28,6 +28,17 @@ public class Vector {
 		
 		
 	}
+	
+	public static int min(int[] v) {
+		int i=1, min=v[0];
+		
+		while(i< v.length) {// To do implementar
+			if(min > v[i]) min = v[i];
+			i++;
+			
+		}
+		return min;
+	}
 	}
 	
 		
