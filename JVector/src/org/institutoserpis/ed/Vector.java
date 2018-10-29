@@ -39,7 +39,44 @@ public class Vector {
 		}
 		return min;
 	}
+	
+	public static int indexOfMin(int[] v) {
+		int i = 1; int min = v[0]; int pos = 0;
+		
+		while(i<v.length) { 
+		if (min > v[i]) {min = v[i];
+		pos = i;
+		}
+		i++;
+		}
+		
+
+	return pos;
 	}
+
+
+
+
+	
+	public static void sort(int[] v) {
+		for(int i =0; i<v.length-1; i++) {
+			for(int j = i+1; j < v.length; j++) {
+				if(v[i] > v[j]) {
+					int aux = v[i];
+					v[i] = v[j];
+					v[j] = aux;
+				}
+		
+		
+				
+			}
+		}
+	
+		
+		
+		
+	}
+}
 	
 		
 

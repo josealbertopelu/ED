@@ -36,4 +36,29 @@ class VectorTest {
 		assertEquals(2,Vector.min(new int[] {2}));
 		assertEquals(-33,Vector.min(new int[] {16,15,14,17,12,-1,-33}));
 	}
+	
+	
+	@Test
+	void indexOfMin() {
+		assertEquals(1,Vector.indexOfMin(new int[] {16,12,15,14,17}));
+		assertEquals(0,Vector.indexOfMin(new int[] {12,16,15,14,17}));
+		assertEquals(4,Vector.indexOfMin(new int[] {16,15,14,17,12}));
+		assertEquals(0,Vector.indexOfMin(new int[] {2}));
+		assertEquals(6,Vector.indexOfMin(new int[] {16,15,14,17,12,-1,-33}));
+		
+}
+	
+	@Test
+	void sort() {
+		int[] v = new int[] {15,12};
+		Vector.sort(v);
+		assertArrayEquals(new int[]{12,15},v);
+		
+		int[] w = new int[] {17,12,15};
+		Vector.sort(w);
+		assertArrayEquals(new int[] {12,15,17}, w);
+	
+	
+		
+	}
 }
