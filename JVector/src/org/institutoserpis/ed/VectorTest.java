@@ -58,7 +58,9 @@ class VectorTest {
 		Vector.sort(w);
 		assertArrayEquals(new int[] {12,15,17}, w);
 	
-	
+		int[] x = new int[] {30,-4,5,8};
+		Vector.sort(x);
+		assertArrayEquals(new int[] {-4,5,8,30},x);
 		
 	}
 }
