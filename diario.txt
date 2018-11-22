@@ -29,3 +29,8 @@ git add .
 git status
 git commit -m "(porque hacemos este commit)"
 
+
+
+19-11-2018
+
+creado cholamundo y csuma y modificado el gitignore

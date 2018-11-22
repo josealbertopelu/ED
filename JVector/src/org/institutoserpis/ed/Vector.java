@@ -68,17 +68,32 @@ public class Vector {
 					v[i] = v[j];
 					v[j] = aux;
 				}
-		
-		
-				
 			}
 		}
+	}
+		
+	public static void sortTwo(int[] v) {
+		for(int i = 0; i<v.length-1; i++) {
+			for(int h = i+1; h<v.length; h++) {
+				if(v[i]> v[h]) {
+					i = h;
+				}
+			}
+			int aux = v[i];
+			v[i] = v[h];
+			v[h] = aux;
+		}
+		
+	}
+				
+			
+		
 	
 		
 		
 		
 	}
-}
+
 	
 		
 
