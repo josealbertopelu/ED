@@ -7,6 +7,8 @@ namespace CVector
         public static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Array.ForEach(new int[] { 3, 5, 7 }, item => Console.WriteLine("item = " + item));
+         
         }
 
         public static int BinarySearch(int[] v, int x){
@@ -27,7 +29,13 @@ namespace CVector
                     mitad = (ini + fin) / 2;
 
             }
-            return v[mitad];
+
+            if (ini > fin)
+                return -1;
+            if(v[mitad] == x){
+                return mitad;
+            }
+            return -1;
         }
     }
 }
