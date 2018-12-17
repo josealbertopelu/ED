@@ -13,6 +13,9 @@ public partial class MainWindow : Gtk.Window
             Console.WriteLine("Click en buttonAceptar con nombre= " + nombre);
 
         };
+        Button button = new Button(Stock.Close);
+        button.Visible = true;
+        vBox.Add(button);
     }
 
     protected void OnDeleteEvent(object sender, DeleteEventArgs a)
