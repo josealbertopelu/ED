@@ -19,8 +19,8 @@ public partial class MainWindow : Gtk.Window
             for (int column = 0; column < 10; column++){
 
                 Button button = new Button();
-
-                    button.Label = "66";
+                for (int i = 1; i < buttons.Count; i++)
+                    button.Label = ;
                 table4.Attach(button, (uint)column, (uint)column + 1, (uint)row, (uint)row + 1);
                 buttons.Add(button);
             }
