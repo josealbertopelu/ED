@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CWindow", "CWindow\CWindow.csproj", "{EF71ED9D-79D3-40C6-B5D9-76E37058F9BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF71ED9D-79D3-40C6-B5D9-76E37058F9BB}.Debug|x86.ActiveCfg = Debug|x86
+		{EF71ED9D-79D3-40C6-B5D9-76E37058F9BB}.Debug|x86.Build.0 = Debug|x86
+		{EF71ED9D-79D3-40C6-B5D9-76E37058F9BB}.Release|x86.ActiveCfg = Release|x86
+		{EF71ED9D-79D3-40C6-B5D9-76E37058F9BB}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal
