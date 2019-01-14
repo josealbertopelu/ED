@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{E032BFD2-CC23-40E1-8341-431D0199EC05}</ProjectGuid>
+    <ProjectGuid>{052006B4-5E3D-453B-A4EA-246F548CBB28}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>CBingo</RootNamespace>
     <AssemblyName>CBingo</AssemblyName>
@@ -64,6 +64,8 @@
     <Compile Include="gtk-gui\MainWindow.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Panel.cs" />
+    <Compile Include="bombo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

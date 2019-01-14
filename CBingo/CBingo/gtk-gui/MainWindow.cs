@@ -3,17 +3,11 @@
 
 public partial class MainWindow
 {
-	private global::Gtk.VBox vbox1;
+	private global::Gtk.VBox vbox;
 
 	private global::Gtk.HBox hbox1;
 
-	private global::Gtk.Button Reiniciar;
-
-	private global::Gtk.Label Numero;
-
-	private global::Gtk.Button Siguiente;
-
-	private global::Gtk.Table table4;
+	private global::Gtk.Button buttonAdelante;
 
 	protected virtual void Build()
 	{
@@ -23,55 +17,31 @@ public partial class MainWindow
 		this.Title = global::Mono.Unix.Catalog.GetString("MainWindow");
 		this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 		// Container child MainWindow.Gtk.Container+ContainerChild
-		this.vbox1 = new global::Gtk.VBox();
-		this.vbox1.Name = "vbox1";
-		this.vbox1.Spacing = 6;
-		// Container child vbox1.Gtk.Box+BoxChild
+		this.vbox = new global::Gtk.VBox();
+		this.vbox.Name = "vbox";
+		this.vbox.Spacing = 6;
+		// Container child vbox.Gtk.Box+BoxChild
 		this.hbox1 = new global::Gtk.HBox();
 		this.hbox1.Name = "hbox1";
 		this.hbox1.Spacing = 6;
 		// Container child hbox1.Gtk.Box+BoxChild
-		this.Reiniciar = new global::Gtk.Button();
-		this.Reiniciar.CanFocus = true;
-		this.Reiniciar.Name = "Reiniciar";
-		this.Reiniciar.UseUnderline = true;
-		this.Reiniciar.Label = global::Mono.Unix.Catalog.GetString("Bingo");
-		this.hbox1.Add(this.Reiniciar);
-		global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.Reiniciar]));
-		w1.Position = 0;
+		this.buttonAdelante = new global::Gtk.Button();
+		this.buttonAdelante.CanFocus = true;
+		this.buttonAdelante.Name = "buttonAdelante";
+		this.buttonAdelante.UseUnderline = true;
+		this.buttonAdelante.Label = global::Mono.Unix.Catalog.GetString("Adelante");
+		this.hbox1.Add(this.buttonAdelante);
+		global::Gtk.Box.BoxChild w1 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.buttonAdelante]));
+		w1.PackType = ((global::Gtk.PackType)(1));
+		w1.Position = 2;
 		w1.Expand = false;
 		w1.Fill = false;
-		// Container child hbox1.Gtk.Box+BoxChild
-		this.Numero = new global::Gtk.Label();
-		this.Numero.Name = "Numero";
-		this.hbox1.Add(this.Numero);
-		global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.Numero]));
-		w2.Position = 1;
-		// Container child hbox1.Gtk.Box+BoxChild
-		this.Siguiente = new global::Gtk.Button();
-		this.Siguiente.CanFocus = true;
-		this.Siguiente.Name = "Siguiente";
-		this.Siguiente.UseStock = true;
-		this.Siguiente.UseUnderline = true;
-		this.Siguiente.Label = "gtk-go-forward";
-		this.hbox1.Add(this.Siguiente);
-		global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.Siguiente]));
-		w3.Position = 2;
-		w3.Expand = false;
-		this.vbox1.Add(this.hbox1);
-		global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.hbox1]));
-		w4.Position = 0;
-		w4.Expand = false;
-		w4.Fill = false;
-		// Container child vbox1.Gtk.Box+BoxChild
-		this.table4 = new global::Gtk.Table(((uint)(9)), ((uint)(10)), false);
-		this.table4.Name = "table4";
-		this.table4.RowSpacing = ((uint)(1));
-		this.table4.ColumnSpacing = ((uint)(1));
-		this.vbox1.Add(this.table4);
-		global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.table4]));
-		w5.Position = 1;
-		this.Add(this.vbox1);
+		this.vbox.Add(this.hbox1);
+		global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.vbox[this.hbox1]));
+		w2.Position = 0;
+		w2.Expand = false;
+		w2.Fill = false;
+		this.Add(this.vbox);
 		if ((this.Child != null))
 		{
 			this.Child.ShowAll();
@@ -79,5 +49,6 @@ public partial class MainWindow
 		this.DefaultWidth = 400;
 		this.DefaultHeight = 300;
 		this.Show();
+		this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
 	}
 }
