@@ -4,7 +4,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -62,3 +66,17 @@ public class MainActivity extends AppCompatActivity {
     }
     }
 
+
+
+    private List<View> getLeafChildren(ViewGroup viewGroup) {
+    List<View> leafChildren = new ArrayList<>();
+    for(int index = 0; index <viewGroup.getChildCount();index++) {
+        View view = viewGroup.getChildAt(index);
+        if(view instanceof ViewGroup)
+            leafChildren.addAll(getLeafChildren(ViewGroup)view);
+        else
+            leafChildren.add(view);
+
+    }
+    return leafChildren;
+    }
