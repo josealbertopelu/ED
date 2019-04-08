@@ -22,6 +22,12 @@ public class MainActivity extends AppCompatActivity {
                     R.id.imageButton5,R.id.imageButton6,R.id.imageButton7, R.id.imageButton8,
                     R.id.imageButton9,R.id.imageButton10,R.id.imageButton11, R.id.imageButton12);
 
+    private boolean esPrimeraPalabra = true;
+    private String primeraPalabra = "";// Esto hay que cambiarlo para imagenButtons
+    private Button primerButton = null;
+    private Handler handler = new Handler();
+
+
 
     List<Integer> imageIds = new ArrayList<>(Arrays.asList(
             R.drawable.claud, R.drawable.jose, R.drawable.kairi,
@@ -49,12 +55,12 @@ public class MainActivity extends AppCompatActivity {
 
         for(int i = 0; i < idButtons.size();i++) {
             ImageButton imageButton = findViewById(idButtons.get(i));
-            //new Handler().postDelayed(() -> imageButton.setImageDrawable(colorDrawable), 0);
             imageButton.setImageDrawable(colorDrawable);
             imageButton.setOnClickListener(this::onButtononClick);
-            //imageButton.setImageResource(imageIds.get(i));
+
 
         }
+
 
     }
 
@@ -64,11 +70,34 @@ public class MainActivity extends AppCompatActivity {
 
 
         Log.i(MainActivity.class.getSimpleName(), "Ejecutando onButtonClick");
-        ImageButton imageButton= (ImageButton)view;
+        ImageButton imageButton = (ImageButton) view;
         int index = imagenes.indexOf(imageButton);
         imageButton.setImageResource(imageIds.get(index));
-        //new Handler().postDelayed(()-> imageButton.setImageResource(imageIds.get(index)), 2000);
+        new Handler().postDelayed(() -> imageButton.setImageResource(imageIds.get(index)), 2000);
+        String palabra = palabras.get(index);// cambiar
+        Button button = (Button) view;
+        button.setText(palabra);// cambiar
+        if (esPrimeraPalabra) {
+            esPrimeraPalabra = palabra;
+            primerButton = button;
+            esPrimeraPalabra = false;
+        } else {
+            esPrimeraPalabra = true;
 
+            if (!palabra.equals(primeraPalabra))
+                handler.postDelayed() ->{
+                primerButton.setText("");
+                button.setText("");
+
+            },4000
+
+        } ;
+    }
+
+
+
+
+    public void incrementarContador(){
 
     }
 }
