@@ -14,6 +14,7 @@ public partial class MainWindow : Gtk.Window
 
         listStore.AppendValues("Rosa", "666777555");
         listStore.AppendValues("Pepe", "666757555");
+        listStore.AppendValues("Ana", "666757556");
     }
 
     protected void OnDeleteEvent(object sender, DeleteEventArgs a)
